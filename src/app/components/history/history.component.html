@@ -1,0 +1,22 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Destinatario</th>
+      <th scope="col">Rut</th>
+      <th scope="col">Banco</th>
+      <th scope="col">Tipo de cuenta</th>
+      <th scope="col">Monto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let history of histories; let i= index">
+      <td>{{i+1}}</td>
+      <td>{{history.Recipient.name ? history.Recipient.name : ''}}</td>
+      <td>{{history.Recipient.rut ? history.Recipient.rut : ''}}</td>
+      <td>{{history.Recipient.bank ? history.Recipient.bank : ''}}</td>
+      <td>{{history.Recipient.TypeAccount.name ? history.Recipient.TypeAccount.name : ''}}</td>
+      <td>{{history.mount}}</td>
+    </tr>
+  </tbody>
+</table>

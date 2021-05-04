@@ -1,0 +1,59 @@
+<div class="card-body">
+  <form [formGroup]="form" (ngSubmit)="save()" novalidate>
+    <h4>{{tittle}}:</h4>
+    <div class="row justify-content-around">
+      <div class="mb-4">
+        <label class="form-label" for="name">Nombre:</label>
+        <input id="name" type="text" formControlName="name" class="form-control"
+          placeholder="Nombre del destinatario">
+      </div>
+      <div class="mb-4">
+        <label class="form-label" for="rut">RUT:</label>
+        <input id="rut" type="number" min=0 formControlName="rut" class="form-control"
+          placeholder="RUT del destinatario">
+      </div>
+    </div>
+    <div class="row justify-content-around">
+      <div class="mb-4">
+        <label class="form-label" for="email">Correo:</label>
+        <input id="email" type="text" formControlName="email" class="form-control"
+          placeholder="Correo del destinatario">
+      </div>
+      <div class="mb-4">
+        <label class="form-label" for="tel">Número de telefono:</label>
+        <input id="tel" type="number" min=0 formControlName="tel" class="form-control"
+          placeholder="Número de telefono del destinatario">
+      </div>
+    </div>
+    <div class="row justify-content-around">
+      <div class="mb-4">
+        <label class="form-label" for="bank">Banco:</label>
+          <select id="bank" formControlName="bank" class="form-select">
+            <option value="" disabled="true" selected="true">Seleccione
+            </option>
+            <option *ngFor="let bank of banks" value="{{bank.id}}">{{bank.name}}</option>
+          </select>
+      </div>
+      <div class="mb-4">
+        <label class="form-label" for="TypeAccountId">Tipo de cuenta:</label>
+        <select id="TypeAccountId" formControlName="TypeAccountId" class="form-select">
+          <option value="" disabled="true" selected="true">Seleccione
+          </option>
+          <option *ngFor="let typeAccount of typesAccount" value="{{typeAccount.id}}">{{typeAccount.name}}</option>
+        </select>
+      </div>
+      <div class="mb-4">
+        <label class="form-label" for="number_account">Número de cuenta:</label>
+        <input id="number_account" type="number" min=0 formControlName="number_account" class="form-control"
+          placeholder="Número de cuenta del destinatario">
+      </div>
+    </div>
+    <div class="row justify-content-around">
+      <div class="mb-4">
+        <button class="btn btn-success btn-block" [disabled]="form.invalid">
+          Guardar
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

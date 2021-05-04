@@ -1,0 +1,30 @@
+
+<div class="card-body">
+  <form [formGroup]="form" (ngSubmit)="save()" novalidate>
+    <h4>{{tittle}}:</h4>
+    <div class="mb-4">
+      <label class="form-label" for="mount">Monto:</label>
+      <input id="mount" type="number" formControlName="mount" class="form-control"
+        placeholder="Monto">
+    </div>
+    <div class="mb-4">
+      <label class="form-label" for="description">Descripcion:</label>
+      <input id="description" type="text" formControlName="description" class="form-control"
+        placeholder="Descripcion">
+    </div>
+    <div class="mb-4">
+      <label class="form-label" for="RecipientNumberAccount">Destinatario:</label>
+      <select id="RecipientNumberAccount" formControlName="RecipientNumberAccount" class="form-select">
+        <option value="" disabled="true" selected="true">Seleccione
+        </option>
+        <option *ngFor="let recipient of recipients" value="{{recipient.number_account}}">{{recipient.name}}</option>
+      </select>
+    </div>
+    <div class="mb-4">
+      <button class="btn btn-success btn-block">
+        Guardar
+      </button>
+    </div>
+  </form>
+</div>
+
