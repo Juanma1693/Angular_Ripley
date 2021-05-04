@@ -2,9 +2,9 @@
   "name": "angular-ripley",
   "version": "0.0.0",
   "scripts": {
-    "heroku-postbuild": "ng build --prod",
+    "heroku-postbuild": "ng --max_old_space_size=2560 build --prod",
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng --max_old_space_size=2560 serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
