@@ -1,7 +1,8 @@
 {
-  "name": "banco",
+  "name": "angular-ripley",
   "version": "0.0.0",
   "scripts": {
+    "heroku-postbuild": "ng build --prod",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",

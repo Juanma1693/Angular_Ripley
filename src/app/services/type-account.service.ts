@@ -8,7 +8,7 @@ import { TypeAccount } from '../models/TypeAccount';
 })
 export class TypeAccountService {
 
-    API_URI = 'http://localhost:5000/typeAccount';
+    API_URI = 'https://node-ripley.herokuapp.com/typeAccount';
     constructor(private http: HttpClient) { }
 
     getAll(): Observable<TypeAccount[]> {
