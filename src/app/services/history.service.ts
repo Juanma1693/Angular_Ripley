@@ -8,7 +8,7 @@ import { History } from '../models/History';
 })
 export class HistoryService {
 
-    API_URI = 'http://localhost:5000/history';
+    API_URI = 'https://node-ripley.herokuapp.com/history';
     constructor(private http: HttpClient) { }
 
     getAll(): Observable<History[]> {

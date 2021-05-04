@@ -8,7 +8,7 @@ import { Recipient } from '../models/Recipient';
 })
 export class RecipientService {
 
-    API_URI = 'http://localhost:5000/recipient';
+    API_URI = 'https://node-ripley.herokuapp.com/recipient';
     constructor(private http: HttpClient) { }
 
     getAll(): Observable<Recipient[]> {
